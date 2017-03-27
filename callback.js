@@ -26,6 +26,3 @@ fs.readFile('input.txt', callfunc);
 
 console.log("Program Ended");
 
-
-
-
