@@ -2,6 +2,7 @@
  * Created by robert.feng  on 2016/12/8.
  */
 var http = require("http");
+
 http.createServer(function(request, response){
     //发送http头部ͷ
     //http状态值：200
@@ -14,3 +15,5 @@ http.createServer(function(request, response){
     //后台终端打印信息
     console.log("Server running at http://localhost:12899/hello world!");
 }).listen(12899);
+
+
