@@ -17,9 +17,9 @@ parmDemArr.push()
 
 objban.name = "dddddddddddddddddddddd";
 
-console.log( " bean property name is :"  +  objban.name  );
+console.log( " bean property name is : "  +  objban.name  );
 
-console.log( " hello node.js I am here "  +  parmStr  +  parmIntArr  );
+console.log( " hello node.js I am here :  "  +  parmStr  +  parmIntArr  );
 
 console.log(  slefutil.sayHello() );
 
