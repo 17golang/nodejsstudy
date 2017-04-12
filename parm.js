@@ -3,7 +3,7 @@
  */
 //node.js 基本变量
 
-var slefutil = require('./util.js');
+
 
 var  parmInt = 5;
 var  parmStr = "      am herer";
@@ -21,8 +21,14 @@ console.log( " bean property name is : "  +  objban.name  );
 
 console.log( " hello node.js I am here :  "  +  parmStr  +  parmIntArr  );
 
-//console.log(  slefutil.sayHello() );
+const redindg = require('./util1.js');
+
+console.log(  redindg.area(4) );
+
+redindg.copymessage(`I am herer 中文  ${redindg.area(44)}`,1);
 
 const circle = require('./utils2.js');
 console.log(`半径为 4 的圆的面积是 ${circle.area(4)}`);
+
+
 
