@@ -2,25 +2,45 @@
  * Created by robertfeng on 2017/3/27.
  */
 
+var initapp = require("./init.js");
 
-var fs = require("fs");
-
-var callfunc = function (err,data) {
-    if (err)
-        return console.error(err);
-    console.log(data.toString());
+function currAges( ages ){
+    return ages-2;
 }
 
-fs.readFile('input.txt', callfunc);
 
-/**
- *
- fs.readFile('input.txt', function (err, data) {
-    if (err) return console.error(err);
-    console.log(data.toString());
+var callbacks = function callback_func( name , ages) {
+
+    //for ( ind = 1 ; ind<3000000000; ind++ ){}
+
+    //var time2 = Date.now();
+    var time2 = new Date().Format("yyyy-MM-dd hh:mm:ss S");
+
+    console.log(` ${time2} My name is ${name} and my age is ${currAges(ages)}`);
+
+}
+
+
+function maintest( school , callback1 ) {
+
+    callback1('robert',39);
+
+
+
+}
+
+maintest('cnxx',  function ( name , ages) {
+
+    //for ( ind = 1 ; ind<3000000000; ind++ ){}
+
+    //var time2 = Date.now();
+    var time2 = new Date().Format("yyyy-MM-dd hh:mm:ss S");
+
+    console.log(` ${time2} My name is ${name} and my age is ${currAges(ages)}`);
+
 });
 
- */
+var time3 = new Date().Format("yyyy-MM-dd hh:mm:ss S");
 
-console.log("Program Ended");
 
+console.log(` ${time3} I am back school ..........`)
