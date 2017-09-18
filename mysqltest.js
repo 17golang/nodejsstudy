@@ -13,12 +13,11 @@ var connection = mysql.createConnection({
     database:'bctrend'
 });
 
+
 connection.connect();
 
 
-
-
-connection.query(" select * from bc_company where id < 100 ", function(err, rows, fields  ) {
+connection.query(" select * from bc_company where id = 1 ", function(err, rows, fields  ) {
 
 
     console.info(` the query1 is ${rows.length} `)
@@ -30,11 +29,11 @@ connection.query(" select * from bc_company where id < 100 ", function(err, rows
     }else{
 
         connection.query(" select * from bc_company where id = 100 ", function(err, rows1, fields  ) {
+
             // if (err) throw err;
             if (err){
                 console.info(err)
             }
-
 
             //console.info(` the query1 is ${rows.length} `)
             console.info(` the query2 is ${rows1.length} `)
