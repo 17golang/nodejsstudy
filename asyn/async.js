@@ -3,7 +3,7 @@
  */
 
 
-var units = require('./init.js');
+var units = require('./../init.js');
 // var fs = require("fs");
 //
 // var data = fs.readFileSync('input.txt');

@@ -52,6 +52,7 @@
 });*/
 
 // reject
+/*
 
 (()=>{
 
@@ -76,4 +77,41 @@
 
 
 
-})()
+})
+*/
+
+
+/**
+ * 可以在 then 方法中加入一个  错误回调函数,将值抓取本次方法的错误
+ */
+
+( ()=>{
+
+
+    let prom1 = new Promise( ( resolve , reject )=>{
+        reject(new Error(`this is a error`))
+    } )
+    let prom2 =  Promise.resolve(2);
+    let prom3 =  Promise.resolve(3);
+
+    prom1.then( (data)=>{
+
+        console.info(` success `)
+        return prom2
+
+    },(err)=>{
+        console.info(` 只抓这个方法的错误 `)
+        console.error(err)
+    }).then(()=>{
+        console.info(`ddddddx`)
+        return prom3
+
+    }).then(()=>{
+
+    }).catch((err)=>{
+        console.error(err)
+    })
+
+
+
+} )()

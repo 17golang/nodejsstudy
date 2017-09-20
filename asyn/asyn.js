@@ -3,7 +3,7 @@
  */
 
 
-var initapp = require("./init.js");
+var initapp = require("./../init.js");
 
 function waraper( brithday ) {
 
