@@ -25,12 +25,14 @@ connection.connect();
 
 fs.readFile('./test.txt',(err,data)=>{
 
+    console.info(` 1 --------- `);
     if (err) return console.error(err);
 
     console.log(`${data.toString()}`)
 
     connection.query(`select * from bc_company where id = 54`,(err,datarows,fields)=>{
 
+        console.info(` 2 --------- `);
         if(err){
 
             conlose.info(err)
@@ -46,6 +48,8 @@ fs.readFile('./test.txt',(err,data)=>{
             if(  data.toString() != website )
 
                 fs.writeFile('./test.txt',` ${website} x `,(err)=>{
+
+                    console.info(` 3 --------- `);
 
                     if ( err ) throw err;
 

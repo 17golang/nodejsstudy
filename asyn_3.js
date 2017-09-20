@@ -143,7 +143,11 @@ function * testgen ( parm1 , parm2 , parm3){
  */
 co( testgen('pam','pam2','pam4') ).catch((err)=>{
     console.error(err.stack)
-})
+}).catch((err)=>{
+    console.error(err.stack)
+    }
+)
+
 
 
 
