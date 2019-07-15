@@ -3,6 +3,8 @@
  */
 
 
+var nconf = require('nconf');
+
 var config = require('./network-config.json')
 
 //console.info(config)
@@ -10,3 +12,9 @@ var config = require('./network-config.json')
 for ( let key in config){
     console.info( key )
 }
+
+
+nconf.file({file:'network-config.json'})
+
+console.info(nconf.get('network-config'))
+

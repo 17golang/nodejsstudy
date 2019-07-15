@@ -3,12 +3,17 @@
  */
 
 
+var key = "grpc://127.0.0.1:8051";
 
-var key = "org1";
-
-if( key.indexOf('org') === 0  ){
+if( key.indexOf('grpc://') === 0  ){
 
 }
 
+console.info(key.indexOf('grpc://'))
 
-console.info(key.indexOf('org'))
+//var string = JSON.stringify(json)
+
+
+
+
+

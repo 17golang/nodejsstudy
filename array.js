@@ -5,6 +5,8 @@
 
 var  parmIntArr = [1,3,4,5];
 
+parmIntArr.push(333333)
+
 parmIntArr.forEach((item,index)=>{
 
     console.log(` ${index}  ==> ${item} `);
