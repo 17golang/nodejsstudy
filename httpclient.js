@@ -1,5 +1,4 @@
 var http=require('http');
-var querystring=require('querystring');
 var url  = require('url')
 
 var httpget = function  ( url ) {
@@ -105,9 +104,6 @@ var httppost = function (options,postData) {
 
 
     })
-
-
-
 
 
 
