@@ -1,3 +1,11 @@
+/**
+ *     https://github.com/godaddy/kubernetes-client
+ *
+ *     411321681@qq.com
+ *     老冯
+ *
+ */
+
 
 const Client=require('kubernetes-client').Client
 const { KubeConfig } = require('kubernetes-client')
@@ -16,9 +24,39 @@ const client = new Client({ backend, version: '1.13' })
 
      const namespaces = await client.api.v1.namespaces.get();
 
-     console.log(namespaces)
+     console.log(JSON.stringify(namespaces))
+
+}
+
+//从服务获取数据
+async function get(){
+
+    const deployment = await client.apis.apps.v1.namespaces('default').deployments.get()
+    console.log(JSON.stringify(deployment,null,"\t"))
 
 }
 
 
-test1();
+//从服务获取数据
+async function getpods(){
+
+    let res = await client.api.v1.namespaces('namespace_name').pods();
+    console.log(JSON.stringify(res,null,"\t"))
+
+}
+
+
+//从服务获取数据
+async function getservice(){
+
+    let res = await client.api.v1.namespaces('namespace_name').service();
+    console.log(JSON.stringify(res,null,"\t"))
+
+}
+
+
+
+//test1();
+//get();
+//getpods();
+getservice();
